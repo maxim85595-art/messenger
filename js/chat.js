@@ -97,4 +97,5 @@ class Chat {
 }
 
 
-window.chat = chat
+window.Chat = Chat;
+
