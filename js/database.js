@@ -104,4 +104,7 @@ class Database {
     }
 }
 
-export default Database;
+
+// УДАЛИТЬ: export default Database;
+// ДОБАВИТЬ:
+window.Database = Database;
