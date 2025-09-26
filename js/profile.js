@@ -89,4 +89,5 @@ class Profile {
     }
 }
 
-export default Profile;
+
+window.Profile = Profile;
