@@ -96,4 +96,5 @@ class Chat {
     }
 }
 
-export default Chat;
+
+window.chat = chat
