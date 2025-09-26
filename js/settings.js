@@ -50,4 +50,5 @@ class Settings {
     }
 }
 
-export default Settings;
+
+window.Settings = Settings;
