@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siruxx Messenger</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Окно регистрации -->
+    <div class="container">
+        <div class="auth-container" id="register-container">
+            <div class="auth-window">
+                <h2>Регистрация в Siruxx Messenger</h2>
+                <form class="auth-form" id="register-form">
+                    <input type="text" id="reg-username" placeholder="Ваше имя" required>
+                    <input type="password" id="reg-password" placeholder="Ваш пароль" required>
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+                <div class="auth-link" id="go-to-login">Есть аккаунт?</div>
+            </div>
+        </div>
+
+        <!-- Окно входа -->
+        <div class="auth-container" id="login-container" style="display: none;">
+            <div class="auth-window">
+                <h2>Вход в Siruxx Messenger</h2>
+                <form class="auth-form" id="login-form">
+                    <input type="text" id="login-username" placeholder="Ваше имя" required>
+                    <input type="password" id="login-password" placeholder="Ваш пароль" required>
+                    <button type="submit">Войти</button>
+                </form>
+                <div class="auth-link" id="go-to-register">Нет аккаунта?</div>
+            </div>
+        </div>
+
+        <!-- Главное окно мессенджера -->
+        <div class="main-container" id="main-container">
+            <!-- Боковая панель с чатами -->
+            <div class="sidebar">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Поиск людей или групп...">
+                </div>
+                <div class="chats-list" id="chats-list">
+                    <!-- Список чатов будет заполняться динамически -->
+                </div>
+                <div class="bottom-nav">
+                    <button class="nav-btn" id="settings-btn">⚙️</button>
+                    <button class="nav-btn" id="profile-btn">👤</button>
+                    <button class="nav-btn" id="group-btn">👥</button>
+                </div>
+            </div>
+
+            <!-- Область чата -->
+            <div class="chat-area">
+                <div class="chat-header">
+                    <div class="message-avatar" id="current-chat-avatar">U</div>
+                    <div class="chat-header-info">
+                        <div class="chat-title" id="current-chat-title">Выберите чат</div>
+                        <div class="typing-indicator" id="typing-indicator"></div>
+                    </div>
+                </div>
+                <div class="messages-container" id="messages-container">
+                    <!-- Сообщения будут добавляться динамически -->
+                </div>
+                <div class="message-input-container">
+                    <input type="text" class="message-input" id="message-input" placeholder="Введите сообщение..." disabled>
+                    <button class="send-btn" id="send-btn" disabled>Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальные окна -->
+    <div class="modal" id="settings-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Настройки</div>
+                <button class="close-btn" id="close-settings">&times;</button>
+            </div>
+            <div class="modal-body" id="settings-body">
+                <!-- Настройки загружаются динамически -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="save-settings">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="profile-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Настройка профиля</div>
+                <button class="close-btn" id="close-profile">&times;</button>
+            </div>
+            <div class="modal-body" id="profile-body">
+                <!-- Форма профиля загружается динамически -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="logout-btn">Выйти из аккаунта</button>
+                <button class="btn btn-secondary" id="delete-account">Удалить аккаунт</button>
+                <button class="btn btn-primary" id="save-profile">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="group-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Создание группы</div>
+                <button class="close-btn" id="close-group">&times;</button>
+            </div>
+            <div class="modal-body" id="group-body">
+                <!-- Форма группы загружается динамически -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancel-group">Отмена</button>
+                <button class="btn btn-primary" id="create-group">Создать</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключаем JavaScript модули -->
+    <script type="module" src="js/database.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/ui.js"></script>
+    <script type="module" src="js/chat.js"></script>
+    <script type="module" src="js/settings.js"></script>
+    <script type="module" src="js/profile.js"></script>
+    <script type="module" src="js/groups.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
