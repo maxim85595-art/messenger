@@ -110,4 +110,5 @@ class Groups {
     }
 }
 
-export default Groups;
+
+window.Group = Group;
