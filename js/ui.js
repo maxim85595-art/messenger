@@ -202,4 +202,5 @@ class UI {
     }
 }
 
-export default UI;
+
+window.Ui = Ui;
