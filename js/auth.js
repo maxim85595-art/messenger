@@ -1,5 +1,5 @@
-import Database from './database.js';
-import UI from './ui.js';
+const Database = await import('./database.js');
+const UI = await import('./ui.js');
 
 class Auth {
     constructor(db, ui) {
@@ -109,4 +109,5 @@ class Auth {
     }
 }
 
-export default Auth;
+
+window.Auth = Auth;
