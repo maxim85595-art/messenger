@@ -1,0 +1,16 @@
+{
+  "name": "siruxx-messenger",
+  "version": "1.0.0",
+  "description": "Siruxx Messenger - веб-мессенджер",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -s . -l 3000",
+    "build": "echo 'No build step required'"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  },
+  "keywords": ["messenger", "chat", "websocket"],
+  "author": "Your Name",
+  "license": "MIT"
+}
